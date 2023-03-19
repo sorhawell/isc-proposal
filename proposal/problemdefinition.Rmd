@@ -1,13 +1,5 @@
 # The Problem
-<!-- 
-Outlining the issue / weak point / problem to be solved by this proposal. This should be a compelling section that sets the reader up for the next section - the proposed solution!
+To keep up with latest advances in data intensive analyses and pipelines is central to keep R an attrictive alround data science eco-system. For anyone in the cummunity where CPU-time and/or in-memory size is a bottleneck, using multi-threaded polars with options for query optimization and out-of-memory execution can be a huge gain. Already, r-arrow exists, and likewise is based in the Apache Arrow memory format. The projects co-exist well and have near zero-copy conversion, making it fast to e.g. use a data connetion/driver from the other library. Polars currently have a stronger emphasis for multi-threaded computation, query optimization making it the current 'king of the hill' in a wide set of benchmarks. Rspark and sparklyr likewise provide similar functionality as polars. However polars is 
 
-It is important to cover:
-
- - [ ] What the problem is
- - [ ] Who it affects
- - [ ] Have there been previous attempts to resolve the problem
- - [ ] Why it should be tackled
--->
 
 
