@@ -1,5 +1,10 @@
-# The Problem
-To keep up with latest advances in data intensive analyses and pipelines is central to keep R an attrictive alround data science eco-system. For anyone in the cummunity where CPU-time and/or in-memory size is a bottleneck, using multi-threaded polars with options for query optimization and out-of-memory execution can be a huge gain. Already, r-arrow exists, and likewise is based in the Apache Arrow memory format. The projects co-exist well and have near zero-copy conversion, making it fast to e.g. use a data connetion/driver from the other library. Polars currently have a stronger emphasis for multi-threaded computation, query optimization making it the current 'king of the hill' in a wide set of benchmarks. Rspark and sparklyr likewise provide similar functionality as polars. However polars is 
+## The Problem
+To keep up with latest advances in data intensive analyses and pipelines is central to keep R an attrictive alround data science eco-system.
+For anyone in the cummunity where CPU-time and/or in-memory size is a bottleneck, using multi-threaded polars with options for query optimization and out-of-memory execution can be a huge gain.
+
+## Current alternatives
+Already, r-arrow exists, which is also based on the Apache Arrow memory format.
+The packages co-exist well as they have near zero-copy conversion, making it fast to e.g. borrow a data conector from the other package. Polars currently have a stronger emphasis for multi-threaded computation + query optimization, making it the current 'king of the hill' in a wide set of benchmarks. Rspark and sparklyr likewise provide similar functionality as polars. However, as r-polars is completely self-contained as an R package with no dependencies, there is no need for third-party installations nor cluster configuration. This makes r-polars a simple choice to start early development on a single desktop, with the option to later deploy the same code in cload as is on e.g. a 64 core instance with no cluster-communication overhead.
 
 
 
