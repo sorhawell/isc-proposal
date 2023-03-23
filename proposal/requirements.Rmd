@@ -1,34 +1,24 @@
 # Requirements
-<!-- 
-An idea of what is required to make the project actually happen
--->
+To release r-polars on CRAN, the CRAN build system must support a number of rust features and toolchain. After r-polars was released to R-universe, it appears very feasible CRAN can also host the r-polars package.
 
 ## People
-<!--
-Who needs to be involved, what's the proposed structure, what will it take to get their involvement?
--->
+Soren Welling is needed for writing bindings. Several other contributors have provided valuble contributions to align the r-polars with best practices R packages. r-polars will benefit greatly from their advice in the future. A handful of R/rust packages have already been released to CRAN, their authors are active in the extendr community, and have given valuable advice on how to become CRAN compliant.
 
 ## Processes
-<!-- 
-What processes need to be put in place e.g. codes of conduct, regular ISC meetings, handover to the community at large?
--->
+r-polars repository currently has two admins Soren Welling (@sorhawell, Denmark) and Tatsuya Shima (@eitsupi, Japan). The r-polars is hosted in the pola-rs, organization where the overall admin of all repositores is author of polars Ritchie Vink (@rithie46). r-polars is released under MIT-license and development process is under the pola-rs community guideline promoting inclusion, mutual respect and more ...
+The official maintainer of r-polars is Soren Welling, however Soren can always be replaced if a majority of contributors find this beneficial.
+
 
 ## Tools & Tech
-<!--
-What is going to be needed to deliver this project? 
+A package called polars will be released to CRAN. The package will be improved monthly with new features, and very few breaking changes.
+No infrastruture is needed other than what is already is freely given via github / r-lib workflows, R-universe build system and the CRAN build system.
+All tools needed for the project (extendr, roxygen2, pkgdown, rust, ...) are available already.
 
-Will cloud computing be used - if yes are there are necessary components that will be deciding factors between providers?
-
-Are there tools or tech that don't exist that will be produced to facilitate the project?
--->
 
 ## Funding
-<!-- 
-[TO DO] THE GUIDANCE IS PRETTY UNCLEAR, ESP IN LIGHT OF GABOR'S PROPOSAL VS AWARD SIZE
+r-polars has not before recieved any funding. Soren Welling is particpating as mentor in one application for a Google Summer of Code stipend to let a master student contribute to r-polars over the summer 2023.
 
--->
+A six month scholarship would help Soren Welling to not need to work in day-time as consultant, to support his family and finalize r-polars as fast as possible.
 
 ## Summary
-<!--
-A summary of the requirements that contextualises the costs
--->
+No requirements are needed for r-polars other than allocated work hours over a six month period.
