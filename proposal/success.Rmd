@@ -1,30 +1,21 @@
 # Success
-<!-- 
-Projects should have a definition of done that is measurable, and a thorough understanding going in of what the risks are to delivery 
--->
+
+ - r-polars should be as fast as py-polars.
+ - r-polars should similarly well adopted in the R-community, as packages wroom, sparklyr, sparkR.
 
 ## Definition of done
-<!-- 
-What does success look like? 
--->
+ - r-polars should stay 90% feature complete in respect to py-polars. This allow for delay to implement latest new features, but complete enough to not fustrate the users.
+ - Any py-polars query expression in python should with minimal token (. -> $, [] -> c(), ...) changes, must also run as an r-polars query in R.
 
 ## Measuring success
-<!-- 
-How will we know when success is achieved, what markers can we use along the way 
--->
+ - Add r-polars queires in the pola-rs benchmark repository to show performance parity.
+ - Number of downloads on all release channels should match wroom, sparklyr and sparkR
+ 
 
 ## Future work
-<!-- 
-How could this be extended / developed in the future by yourself and/or the community in general?
--->
+ - After sparkR came sparklyr. After data.table came dt_plyr. It is not unthinkable of a pl_plyr. The db_plyr lazy/collect syntax is quite releated to
+ polars lazy syntax. py-polars already has a 'tidy' syntax extension. 
 
 ## Key risks
-<!-- 
-What sort of things could come up that can delay or break the project?
-
- - [ ] People
- - [ ] Processes
- - [ ] Tooling & Technology
- - [ ] Costs
-
--->
+ - r-polars community will not grow big enough to keep up with feature updates in rust/py-polars and/or fix the breaking changes in base R and it's toolchain.
+ - r-polars will not be adopted, as the R users dislike learning a new query syntax
