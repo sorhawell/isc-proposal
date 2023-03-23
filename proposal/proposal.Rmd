@@ -1,20 +1,26 @@
 # The proposal
-<!--
-This is where the proposal should be outlined. 
--->
+
+I propose to extend the feature completeness of r-polars to make it a viable choice of any R user, needing the extra power in their data pre-processing.
+Especially all the remaining methods of the central classes [DataFrame(link to py-polars equivalent)](https://github.com/pola-rs/polars/blob/master/py-polars/polars/dataframe/frame.py), [LazyFrame](https://github.com/pola-rs/polars/blob/master/py-polars/polars/lazyframe/frame.py) and [Series](https://github.com/pola-rs/polars/blob/master/py-polars/polars/series/series.py) class should be implemented, tested and documented.
+The current r-polars has complete coverage of unit tests and documentation. All added features must immediately also have unit tests and documentation.
+r-polars will be released on CRAN with the full feature set, except SIMD instructions.
 
 ## Overview
-<!--
-At a high-level address what your proposal is and how it will address the problem identified. Highlight any benefits to the R Community that follow from solving the problem. This should be your most compelling section.
--->
+Grant Soren Welling a scholarship to finialize r-polars in six months, such that any R project, that needs the fastest available pre-processing of tables, can get started. Also Soren Welling must daily support any contributor or issue-raiser in the shared goal of improving the usefullnes of r-polars.
 
 ## Detail
-<!--
-Go into more detail about the specifics of the project and it delivers against the problem.
+ ### Minimum Viable Product:
+   The current package release of r-polars could be seen as the MVP. Already 'rpolars' is released on github and R-universe and works fine, however r-polars is not feature complete. A  could also be understood as the minimal viable product which will be extensively used
+   
+ ### Architecture
+   r-polars bindings to rust-polars are supported by the rust crate extendr_api. This is analogous to have py-polars is supported by pyO3. The r-polas rust side code is very similar to the py-polars rust code. R package rextendr provides auto generated function calls to the rust side. The extendr bindings make up the private methods and functions. The public r-polars API are made of R functions wrapping the private api. r-polars strictly adheres to no mutable functions/methods in the public api unless configured otherwise. All functions are documented with roxygen2 and pkgdown. All functions/methods are tested with testthat unit tests with 800 expectations so far. For sake of sanity, r-polars has the same source file structure as py-polars. r-polars has no hard dependencies to other R packages except for internally bundled R package codetools.
+   
+### Assumptions
+  r-polars will become a vuluable and popular tool in the R-community for heavy data pre-processing.
+  r-polars can be just as fast and feature rich as py-polars.
+  Rust and extendr can make safe multi-threaded R functions easy to develop and maintain.
+  r-polars can rely on extendr-community, that the rust integration with R will work with future releases of R.
+  r-polars can rely on underlying rust-polars to improve the performance and functionality.
+  r-polars project will gain enough contributors to keep up with py-polars features with 6 months delay.
+  
 
-Depending on project type the detail section should include:
-
- - [ ] Minimum Viable Product
- - [ ] Architecture
- - [ ] Assumptions
--->
